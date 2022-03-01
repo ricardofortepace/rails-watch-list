@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Add a Movie</h1>
+  <%=simple_form_for [@list, @bookmark] do |f|%>
+    <%= f.association :movie, collection: Movie.all %>
+    <%= f.input :comments%>
+    <%= f.submit %>
+  <%end%>
+</div>
+
+<p><%=link_to "Add Movie", root_path%></p>
+<p><%=link_to "<<home", root_path%></p>
